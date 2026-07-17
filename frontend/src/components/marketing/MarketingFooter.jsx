@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 export default function MarketingFooter() {
   return (
     <footer className="border-t border-border">
-      <div className="max-w-[1280px] mx-auto px-6 lg:px-10 py-16">
-        <div className="grid grid-cols-2 md:grid-cols-12 gap-10">
-          <div className="col-span-2 md:col-span-5">
-            <div className="font-display text-3xl">ExpenseFlow</div>
-            <p className="mt-3 text-sm text-ink-soft max-w-sm">
+      <div class="max-w-[1280px] mx-auto px-6 lg:px-10 py-16">
+        <div class="grid grid-cols-2 md:grid-cols-12 gap-10">
+          <div class="col-span-2 md:col-span-5">
+            <div class="font-display text-3xl">ExpenseFlow</div>
+            <p class="mt-3 text-sm text-ink-soft max-w-sm">
               Collaborative expense management for friends, roommates, couples,
               families, travelers, clubs, and small teams.
             </p>
@@ -30,8 +30,8 @@ export default function MarketingFooter() {
             { to: "https://github.com/alimanpur/ExpenseFlow_Day-02", label: "GitHub" },
           ]} />
         </div>
-        <div className="mt-16 pt-6 border-t border-border flex flex-col md:flex-row items-start md:items-center justify-between gap-3 text-xs text-ink-muted font-mono">
-          <div>© {new Date().getFullYear()} ExpenseFlow</div>
+        <div class="mt-16 pt-6 border-t border-border flex flex-col md:flex-row items-start md:items-center justify-between gap-3 text-xs text-ink-muted font-mono">
+          <div>© {new Date().getFullYear()} ExpenseFlow | Aliasger Manpur</div>
           <div>All rights reserved.</div>
         </div>
       </div>
