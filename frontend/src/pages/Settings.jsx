@@ -85,25 +85,6 @@ export default function Settings() {
               </div>
               <Field label="Display name" defaultValue={user?.name || ""} />
               <Field label="Email" defaultValue={user?.email || ""} disabled />
-              <div className="mt-8 pt-6 border-t border-rule">
-                <h3 className="font-display text-xl mb-4">Connected accounts</h3>
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between p-4 border border-ink bg-card">
-                    <div>
-                      <div className="font-display text-base">Google</div>
-                      <div className="font-mono text-[10px] uppercase tracking-[0.16em] text-ink-muted">Connected</div>
-                    </div>
-                    <button className="font-mono text-[11px] uppercase tracking-[0.16em] text-vermilion hover:underline">Disconnect</button>
-                  </div>
-                  <div className="flex items-center justify-between p-4 border border-rule bg-paper">
-                    <div>
-                      <div className="font-display text-base text-ink-muted">Apple</div>
-                      <div className="font-mono text-[10px] uppercase tracking-[0.16em] text-ink-muted">Not connected</div>
-                    </div>
-                    <button className="font-mono text-[11px] uppercase tracking-[0.16em] border border-ink px-3 py-1.5 hover:bg-ink hover:text-paper">Connect</button>
-                  </div>
-                </div>
-              </div>
             </div>
           )}
 

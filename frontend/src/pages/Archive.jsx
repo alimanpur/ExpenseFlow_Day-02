@@ -134,7 +134,7 @@ export default function Archive() {
       <section className="px-5 md:px-10 lg:px-14 pt-10 md:pt-14 pb-8 border-b border-ink">
         <div className="flex items-center gap-3 mb-6">
           <div className="font-mono text-[10px] uppercase tracking-[0.28em] text-ink-muted">
-            Folio V · Archive
+          V · Archive
           </div>
           <div className="h-px flex-1 bg-ink" />
           <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-ink-muted">
