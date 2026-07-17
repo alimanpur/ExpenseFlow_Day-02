@@ -85,7 +85,22 @@ const config = Object.freeze({
 
   // CORS
   cors: {
-    origin: process.env.CORS_ORIGIN || 'http://localhost:5173',
+    origin: (origin, callback) => {
+      const allowedOrigins = (process.env.CORS_ORIGIN || 'http://localhost:5173')
+        .split(',')
+        .map(o => o.trim());
+      
+      // Vercel preview deployments pattern: https://expense-flow-day-02-front-*.vercel.app
+      const vercelPreviewPattern = /^https:\/\/expense-flow-day-02-front-[a-z0-9-]+\.vercel\.app$/;
+      
+      if (!origin) return callback(null, true); // Allow non-browser requests
+      
+      if (allowedOrigins.includes(origin) || vercelPreviewPattern.test(origin)) {
+        return callback(null, true);
+      }
+      
+      return callback(new Error('Not allowed by CORS'));
+    },
     credentials: process.env.CORS_CREDENTIALS === 'true',
   },
 
