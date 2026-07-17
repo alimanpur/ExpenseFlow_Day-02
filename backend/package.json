@@ -17,7 +17,7 @@
     "lint": "eslint src/",
     "lint:fix": "eslint src/ --fix",
     "format": "prettier --write 'src/**/*.js'",
-    "build": "npm run lint && npm test",
+    "build": "echo 'No build step required for Node.js backend'",
     "precommit": "npm run lint && npm run test"
   },
   "dependencies": {
