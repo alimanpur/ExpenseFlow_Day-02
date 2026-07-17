@@ -1,0 +1,256 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme inline {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Fraunces", ui-serif, Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  --radius-sm: 2px;
+  --radius-md: 3px;
+  --radius-lg: 4px;
+  --radius-xl: 6px;
+  --radius-2xl: 8px;
+
+  --color-background: var(--paper);
+  --color-foreground: var(--ink);
+  --color-paper: var(--paper);
+  --color-paper-deep: var(--paper-deep);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-muted: var(--ink-muted);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-vermilion: var(--vermilion);
+  --color-vermilion-ink: var(--vermilion-ink);
+  --color-ledger: var(--ledger);
+  --color-ledger-ink: var(--ledger-ink);
+  --color-positive: var(--ledger);
+  --color-negative: var(--vermilion);
+  --color-destructive: var(--vermilion);
+  --color-destructive-foreground: var(--paper);
+  --color-rule: var(--rule);
+  --color-rule-bold: var(--rule-bold);
+  --color-border: var(--rule);
+  --color-border-strong: var(--rule-bold);
+  --color-input: var(--rule);
+  --color-ring: var(--ink);
+  --color-ring-offset-background: var(--background);
+  --color-chart-1: var(--ink);
+  --color-chart-2: var(--vermilion);
+  --color-chart-3: var(--ledger);
+  --color-chart-4: var(--ink-muted);
+  --color-chart-5: var(--paper-deep);
+}
+
+:root {
+  --radius: 4px;
+
+  --paper: oklch(0.955 0.018 78);
+  --paper-deep: oklch(0.91 0.024 78);
+  --ink: oklch(0.18 0.018 50);
+  --ink-soft: oklch(0.34 0.018 50);
+  --ink-muted: oklch(0.55 0.014 60);
+
+  --card: oklch(0.975 0.012 78);
+  --card-foreground: var(--ink);
+  --popover: oklch(0.985 0.008 78);
+  --popover-foreground: var(--ink);
+
+  --primary: var(--ink);
+  --primary-foreground: var(--paper);
+  --secondary: var(--paper-deep);
+  --secondary-foreground: var(--ink);
+  --muted: oklch(0.91 0.02 78);
+  --muted-foreground: var(--ink-muted);
+  --accent: oklch(0.90 0.024 78);
+  --accent-foreground: var(--ink);
+
+  --vermilion: oklch(0.62 0.22 32);
+  --vermilion-ink: oklch(0.36 0.16 32);
+  --ledger: oklch(0.46 0.10 165);
+  --ledger-ink: oklch(0.28 0.08 165);
+
+  --rule: oklch(0.82 0.018 78);
+  --rule-bold: oklch(0.62 0.022 78);
+}
+
+.dark {
+  --paper: oklch(0.18 0.014 60);
+  --paper-deep: oklch(0.22 0.014 60);
+  --ink: oklch(0.96 0.012 78);
+  --ink-soft: oklch(0.82 0.012 78);
+  --ink-muted: oklch(0.62 0.012 78);
+  --background: var(--paper);
+  --foreground: var(--ink);
+  --card: oklch(0.21 0.014 60);
+  --card-foreground: var(--ink);
+  --popover: oklch(0.21 0.014 60);
+  --popover-foreground: var(--ink);
+  --primary: var(--ink);
+  --primary-foreground: var(--paper);
+  --secondary: oklch(0.26 0.014 60);
+  --secondary-foreground: var(--ink);
+  --muted: oklch(0.26 0.014 60);
+  --muted-foreground: oklch(0.62 0.012 78);
+  --accent: oklch(0.30 0.014 60);
+  --accent-foreground: var(--ink);
+  --rule: oklch(0.32 0.014 60);
+  --rule-bold: oklch(0.46 0.014 60);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-rule);
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv11";
+  }
+
+  ::selection {
+    background-color: var(--color-vermilion);
+    color: var(--color-paper);
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-serif);
+    letter-spacing: -0.02em;
+    font-weight: 400;
+    font-variation-settings: "SOFT" 30, "WONK" 0;
+  }
+}
+
+@utility font-display {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  font-variation-settings: "SOFT" 30, "WONK" 0;
+}
+
+@utility font-figure {
+  font-family: var(--font-mono);
+  font-feature-settings: "tnum", "ss01";
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+
+@utility eyebrow {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  line-height: 1;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-ink-muted);
+}
+
+@utility hairline {
+  border-color: var(--color-rule);
+  border-style: solid;
+}
+
+@utility ruled-paper {
+  background-image:
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent 31px,
+      color-mix(in oklab, var(--color-ink) 7%, transparent) 31px,
+      color-mix(in oklab, var(--color-ink) 7%, transparent) 32px
+    );
+  background-position: 0 12px;
+}
+
+@utility ruled-columns {
+  background-image:
+    linear-gradient(to right, color-mix(in oklab, var(--color-vermilion) 28%, transparent) 0 1px, transparent 1px);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+@utility perf-top {
+  -webkit-mask-image: radial-gradient(circle 4px at 6px 0, transparent 4px, black 4.5px);
+          mask-image: radial-gradient(circle 4px at 6px 0, transparent 4px, black 4.5px);
+  -webkit-mask-size: 12px 100%;
+          mask-size: 12px 100%;
+  -webkit-mask-repeat: repeat-x;
+          mask-repeat: repeat-x;
+}
+
+@utility perf-bottom {
+  -webkit-mask-image: radial-gradient(circle 4px at 6px 100%, transparent 4px, black 4.5px);
+          mask-image: radial-gradient(circle 4px at 6px 100%, transparent 4px, black 4.5px);
+  -webkit-mask-size: 12px 100%;
+          mask-size: 12px 100%;
+  -webkit-mask-repeat: repeat-x;
+          mask-repeat: repeat-x;
+}
+
+@utility vermilion-mark {
+  background-color: var(--color-vermilion);
+  color: var(--color-paper);
+  font-family: var(--font-mono);
+  font-feature-settings: "tnum";
+}
+
+@utility ledger-mark {
+  background-color: var(--color-ledger);
+  color: var(--color-paper);
+  font-family: var(--font-mono);
+  font-feature-settings: "tnum";
+}
+
+@utility stamp {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  border: 1.5px solid currentColor;
+  border-radius: 2px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  transform: rotate(-2deg);
+  opacity: 0.85;
+}
+
+@keyframes page-turn-in {
+  from { opacity: 0; transform: translateX(12px) rotateY(-2deg); transform-origin: left center; }
+  to   { opacity: 1; transform: translateX(0) rotateY(0); }
+}
+
+@utility page-turn {
+  animation: page-turn-in 360ms cubic-bezier(.2,.7,.2,1) both;
+}
+
+@keyframes type-blink {
+  0%, 50% { opacity: 1; }
+  50.01%, 100% { opacity: 0; }
+}
+
+@utility caret {
+  display: inline-block;
+  width: 0.5ch;
+  background: currentColor;
+  animation: type-blink 1s steps(1) infinite;
+}

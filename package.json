@@ -1,0 +1,43 @@
+{
+  "name": "expenseflow",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ExpenseFlow — collaborative expense management platform",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/expenseflow.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-org/expenseflow/issues"
+  },
+  "homepage": "https://github.com/your-org/expenseflow#readme",
+  "keywords": [
+    "expense",
+    "split",
+    "settlement",
+    "collaborative",
+    "finance",
+    "saas"
+  ],
+  "author": "ExpenseFlow Team",
+  "license": "MIT",
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace=backend\" \"npm run dev --workspace=frontend\"",
+    "build": "npm run build --workspace=frontend && npm run build --workspace=backend",
+    "lint": "npm run lint --workspaces",
+    "test": "npm run test --workspaces",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0",
+    "husky": "^8.0.3"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
+  }
+}

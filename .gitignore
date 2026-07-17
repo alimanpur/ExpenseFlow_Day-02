@@ -1,0 +1,53 @@
+# Kilo local state
+.kilo/
+
+# Dependencies
+node_modules/
+*/node_modules/
+
+# Build outputs
+dist/
+build/
+*/dist/
+*/build/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Testing
+coverage/
+.nyc_output/
+
+# Uploads
+uploads/
+*/uploads/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Lock files (optional, uncomment if using pnpm)
+# pnpm-lock.yaml
+
+# Cache
+.cache/
+.parcel-cache/
