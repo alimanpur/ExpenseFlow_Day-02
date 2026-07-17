@@ -16,7 +16,7 @@ export default function MarketingFooter() {
             { to: "/product", label: "Features" },
             { to: "/pricing", label: "Pricing" },
             { to: "/faq", label: "FAQ" },
-            { to: "/help", label: "Documentation" },
+            { to: "/docs", label: "Documentation" },
           ]} />
           <FooterCol title="Company" links={[
             { to: "/about", label: "About" },
@@ -25,7 +25,6 @@ export default function MarketingFooter() {
             { to: "/terms", label: "Terms" },
           ]} />
           <FooterCol title="Support" links={[
-            { to: "/help", label: "Help Center" },
             { to: "/contact", label: "Contact Us" },
             { to: "https://github.com/alimanpur/ExpenseFlow_Day-02", label: "GitHub" },
           ]} />

@@ -19,7 +19,7 @@ const app = express();
 // ─── Security Middleware ──────────────────────────────────
 app.use(helmet());
 app.use(cors({
-  origin: config.cors.origin === '*' ? true : config.cors.origin.split(',').map(o => o.trim()),
+  origin: config.cors.origin,
   credentials: config.cors.credentials,
   methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],

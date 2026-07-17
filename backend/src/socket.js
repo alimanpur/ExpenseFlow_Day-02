@@ -9,14 +9,14 @@ const { info } = require('./utils/logger');
 let io;
 
 function initializeSocket(httpServer) {
-  io = new Server(httpServer, {
-    cors: {
-      origin: config.cors.origin === '*' ? true : config.cors.origin.split(',').map(o => o.trim()),
-      credentials: config.cors.credentials,
-    },
-    pingInterval: 25000,
-    pingTimeout: 20000,
-  });
+io = new Server(httpServer, {
+  cors: {
+    origin: config.cors.origin,
+    credentials: config.cors.credentials,
+  },
+  pingInterval: 25000,
+  pingTimeout: 20000,
+});
 
   // Authentication middleware
   io.use(async (socket, next) => {

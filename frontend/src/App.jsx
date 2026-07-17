@@ -15,32 +15,7 @@ const FAQ = lazy(() => import("./pages/marketing/FAQ.jsx"));
 const About = lazy(() => import("./pages/marketing/About.jsx"));
 const UseCases = lazy(() => import("./pages/marketing/UseCases.jsx"));
 const Contact = lazy(() => import("./pages/marketing/Contact.jsx"));
-const Terms = lazy(() => import("./pages/marketing/Terms.jsx"));
-const Privacy = lazy(() => import("./pages/marketing/Privacy.jsx"));
-const SignIn = lazy(() => import("./pages/auth/SignIn.jsx"));
-const SignUp = lazy(() => import("./pages/auth/SignUp.jsx"));
-const ForgotPassword = lazy(() => import("./pages/auth/ForgotPassword.jsx"));
-const ResetPassword = lazy(() => import("./pages/auth/ResetPassword.jsx"));
-const Verify = lazy(() => import("./pages/auth/Verify.jsx"));
-const Ledger = lazy(() => import("./pages/Ledger.jsx"));
-const Entries = lazy(() => import("./components/entries/EntriesPage.jsx"));
-const People = lazy(() => import("./pages/People.jsx"));
-const Circles = lazy(() => import("./pages/Circles.jsx"));
-const CircleDetail = lazy(() => import("./pages/CircleDetail.jsx"));
-const Archive = lazy(() => import("./pages/Archive.jsx"));
-const ExpenseDetail = lazy(() => import("./pages/ExpenseDetail.jsx"));
-const EditExpense = lazy(() => import("./pages/EditExpense.jsx"));
-const NewExpense = lazy(() => import("./pages/NewExpense.jsx"));
-const NewCircle = lazy(() => import("./pages/NewCircle.jsx"));
-const Settings = lazy(() => import("./pages/Settings.jsx"));
-const Settlements = lazy(() => import("./pages/Settlements.jsx"));
-const Analytics = lazy(() => import("./pages/Analytics.jsx"));
-const Activity = lazy(() => import("./pages/Activity.jsx"));
-const Profile = lazy(() => import("./pages/Profile.jsx"));
-const Help = lazy(() => import("./pages/Help.jsx"));
-const Notifications = lazy(() => import("./pages/Notifications.jsx"));
-const Reports = lazy(() => import("./pages/app/Reports.jsx"));
-const Search = lazy(() => import("./pages/app/Search.jsx"));
+const Docs = lazy(() => import("./pages/marketing/Docs.jsx"));
 
 // Create a QueryClient instance
 const queryClient = new QueryClient({
@@ -78,6 +53,7 @@ export default function App() {
               <Route path="/about" element={<About />} />
               <Route path="/use-cases" element={<UseCases />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/docs" element={<Docs />} />
               <Route path="/terms" element={<Terms />} />
               <Route path="/privacy" element={<Privacy />} />
 
