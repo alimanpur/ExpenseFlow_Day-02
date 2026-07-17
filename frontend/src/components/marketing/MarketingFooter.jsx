@@ -25,6 +25,7 @@ export default function MarketingFooter() {
             { to: "/terms", label: "Terms" },
           ]} />
           <FooterCol title="Support" links={[
+            { to: "/marketing-help", label: "Help Center" },
             { to: "/contact", label: "Contact Us" },
             { to: "https://github.com/alimanpur/ExpenseFlow_Day-02", label: "GitHub" },
           ]} />
