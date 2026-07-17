@@ -1,0 +1,32 @@
+root: "",
+  cleanUrls: true,
+  redirects: [
+    { source: "/", destination: "/" },
+    { source: "/login", destination: "/signin" },
+    { source: "/signup", destination: "/signup" },
+    { source: "/app", destination: "/app/ledger" }
+  ],
+  headers: [
+    {
+      source: "/(.*)",
+      headers: [
+        { key: "X-Content-Type-Options", value: "nosniff" },
+        { key: "X-Frame-Options", value: "DENY" }
+      ]
+    }
+  ],
+  buildDirectory: "dist",
+  routes: [
+    {
+      source: "/static/:slug",
+      dest: "frontend/dist/static/:slug",
+      check: true
+    },
+    {
+      source: "/api/:path(.*)",
+      dest: "backend",
+      continue: true
+    }
+  ],
+  proxy: []
+}
