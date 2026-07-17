@@ -54,6 +54,7 @@ export default function App() {
               <Route path="/use-cases" element={<UseCases />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/docs" element={<Docs />} />
+              <Route path="/marketing-help" element={<Help />} />
               <Route path="/terms" element={<Terms />} />
               <Route path="/privacy" element={<Privacy />} />
 
